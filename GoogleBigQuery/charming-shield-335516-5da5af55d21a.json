@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "charming-shield-335516",
+  "private_key_id": "5da5af55d21a0db61487e7cfe7da6862a8b1a998",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+8z8IioRH9+Ks\nTtCvj7e9bfdMUBVOE22mTPYRVG3LPybjFqXfHSU18g3r/uh9AhP4E0UhBCHwZpRm\n6inU+A37elV8kWQnUMEjzhPGr+8gXHu4I0ah3iccWy2b+TrlFHKJGOUEEEgMzrNN\njVm9CQvqwm8qRRhe+ZbUIa6QxfoXzl4A6OMMya4tJRz1Wwc3P0cE9T9Nh+XikswK\nmPWphbZSPKjJqvM0oWltigXJBBY8XGRZDC1sky8PqTBVaQx3SdpSzy05JYT+HsCb\njpopZKoN5Zq/CN9bEcMi75xXMVGp7R/VUTkvrcV18vKIecPZbbahNlSsWyjULdNv\nOgAjxdAPAgMBAAECggEAGKhyuFii0mRZWiTnX/RwJr8fkzQ4PBfYLgR8Niqv7vId\nxG91RgWOe5PhZltJjHMLPxrF74iIFXI5sbyFYGIT9CiNB4QC6ezMtCH1fc/UUlp/\nA31Srq5wYIIJtr2NdG2aiMe1MzwjAbxjfR1GvFmBt3QaRNwdVI5ogsZCs6FNNWuQ\nGmS243qTrOAVca8QR5L6PsLn2ZTSfha9RfCM2PLbGd0pK5poN+I2SqXwDrcPJ5+9\nJ1HLwpEzN6aH/GNl8tYfAyyp1xJU9p/QSF2Jb3gH5ZJKnDpLKZjGJtW1AfdQ6E70\n4hwXUNoOQXoTyNlDYmqcyCSMpZBTsJTVshqw7sKPIQKBgQD/DVgyVKi0rxCwqG4n\nsuiwcl81rCel7BmFPx+hxqiFbQYJUF+6ik1kHEPgG0Qs8rbIkmP9elcaEaHVV9qv\nK1oFkpzy74KYT34HPgGHTCQWSIpdsHhqQc4OPANlAfyqo8m3cEHU4QVWtCdf3LJw\nH4S1fKmy+22TyvDz+7KhrmpbnwKBgQC/qOpXPGUfI6Q/uFNEpsESPV6C+dW8aUNN\nAXGuWMjsJaqwRPHuRgIpKso5gKT2i+VpOkV7Oc5IkmjE7Q8BLitdxXBreyY8XDSG\na4/c1rwLPM4mceftONjArkzeE7TDG1Ejk1elAyT3QY7qRnjiLhFSIKrbZ0WR3Nie\nRA5PYXA1kQKBgDiP9w1CZR+c63CiCbvYG252DtNSWICdeZNpSlSQP/NHGF2ca35t\nCXi4I/1hTp9BPHQCsxYVuZdYbbFoiGDslkxCFXhy0V2B04s7nw8oPaCLedQJPMsj\nyNSzTnVqGWSmaie6R380YAC4dzr1MMVY2A9/lArTY5uxF/qjyRu+GGw1AoGAXRXX\nKyNkIamX3nLRzmgHIaq4unhI/MdLLp1i70Cj5T2uFwqFTiqmZgQoT6FRfYUYmPD6\nSg0bSVgClpJkVThtS4/XN/yJ54sI37hiGOoaToLrxPRRpn+TlpGRN9LuWkxsLhEj\n4jsSuxwWI2ay03d4ZiEDmqgfu+Y9NzDqmldCvmECgYEAiClEWQRb1CDWsfG7xBi4\nMSDyOZGU0Ol2XR4IW/2QfFnjT86ex7TbBat36hVPiK3pyOfjd+Ohl/jl0+YdXsu2\nRJeH8WCdys1gm8y1rM79mW3X1moho0Xl4sNHdrsL0KysMH8d12f0Fc3Of/2gsRT3\nrsZpvh+ru9M+CwiqKZBe4fg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gh-bigqueryaccess@charming-shield-335516.iam.gserviceaccount.com",
+  "client_id": "112497732282012579161",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gh-bigqueryaccess%40charming-shield-335516.iam.gserviceaccount.com"
+}

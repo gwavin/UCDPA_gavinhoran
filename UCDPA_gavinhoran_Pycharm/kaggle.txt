@@ -14,3 +14,7 @@ optional arguments:
   --user USER           Find public datasets owned by a specific user or organization
   -p PAGE, --page PAGE  Page number for results paging. Page size is 20 by default
   -v, --csv             Print results in CSV format (if not set print in table format)
+
+
+
+kaggle datasets list -s BITCOIN > Kagglebitcoin.csv
