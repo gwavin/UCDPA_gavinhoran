@@ -7,10 +7,10 @@ import matplotlib.cbook as cbook
 
 sns.set_style('darkgrid') # darkgrid, white grid, dark, white and ticks
 plt.rc('axes', titlesize=12)     # fontsize of the axes title
-plt.rc('axes', labelsize=4)    # fontsize of the x and y labels
-plt.rc('xtick', labelsize=9)    # fontsize of the tick labels
-plt.rc('ytick', labelsize=9)    # fontsize of the tick labels
-plt.rc('legend', fontsize=9)    # legend fontsize
+plt.rc('axes', labelsize=10)    # fontsize of the x and y labels
+plt.rc('xtick', labelsize=10)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=10)    # fontsize of the tick labels
+plt.rc('legend', fontsize=10)    # legend fontsize
 plt.rc('font', size=13)          # controls default text sizes
 
 #this data comes from ECDC testing data
