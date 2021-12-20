@@ -29,6 +29,7 @@ sns.lineplot(x="year_week",y="testing_rate",data=irishData)
 
 
 plt.xticks(rotation= 90)
+plt.savefig('testingSaveRegressionOrder2.png')
 # plt.plot()
 # Show plot
 plt.show()

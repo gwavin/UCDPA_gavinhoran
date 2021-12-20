@@ -43,11 +43,11 @@ df_trends.columns = df_trends.columns.droplevel(0) #drop outside header
 df_trends = df_trends.drop('isPartial', axis = 1) #drop "isPartial"
 df_trends.reset_index(level=0,inplace=True) #reset_index
 # df_trends.columns=['date','Bitcoin-US','Ethereum-US','COVID-19-US','Trump-US','Bitcoin-UK','Ethereum-UK','COVID-19-UK','Trump-UK','Bitcoin-Germany','Ethereum-Germany','COVID-19-Germany','Trump-Germany'] #change column names
-
-df_trends.columns=['date','Bitcoin-US'] #change column names
-
-sns.set(color_codes=True)
-dx = df_trends.plot(figsize = (12,8),x="date", y=['Bitcoin-US','Bitcoin-UK','Bitcoin-Germany'], kind="line", title = "Bitcoin Google Trends")
-dx.set_xlabel('Date')
-dx.set_ylabel('Trends Index')
-dx.tick_params(axis='both', which='both', labelsize=10)
+print(df_trends.head())
+# df_trends.columns=['date','Bitcoin-US'] #change column names
+# #
+# sns.set(color_codes=True)
+# dx = df_trends.plot(figsize = (12,8),x="date", y=['Bitcoin-US','Bitcoin-UK','Bitcoin-Germany'], kind="line", title = "Bitcoin Google Trends")
+# dx.set_xlabel('Date')
+# dx.set_ylabel('Trends Index')
+# dx.tick_params(axis='both', which='both', labelsize=10)

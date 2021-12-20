@@ -25,12 +25,14 @@ df_country = df[df["country_code"].isin(country)]
 def niceDate(year_week):
 	return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
 
+df = df.copy()
 df_country['Test_Dates'] = df['year_week'].apply(niceDate)
 
 #print(df_country['Test_Dates'].head())
 
 
 sns.lineplot(x="Test_Dates",y="testing_rate",data=df_country,hue='country_code')
+plt.savefig('dateDefGraphs.png')
 plt.show()
 
 

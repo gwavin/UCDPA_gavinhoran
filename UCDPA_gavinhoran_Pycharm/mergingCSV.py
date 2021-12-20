@@ -32,6 +32,7 @@ df2 = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/virusvariant/csv/data
 df_new = pd.merge(df, df2, left_on=('country', 'country_code', 'year_week'),right_on=('country', 'country_code', 'year_week'), how="outer")
 print(df_new.head())
 df_new.to_csv(r'variantAndTestingDataMerged.csv')
+
 for col in df_new.columns:
     print(col)
 

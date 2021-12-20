@@ -27,8 +27,8 @@ def niceDate(year_week):
 
 #df_country['Test_Dates'] = df['year_week'].apply(niceDate)
 
-
-df_country['Test_Dates'] = df_country.iloc[:,2].apply(niceDate).copy()
+df_country = df_country.copy()
+df_country['Test_Dates'] = df_country.iloc[:,2].apply(niceDate)
 
 
 #df_country_name_index = df_country
