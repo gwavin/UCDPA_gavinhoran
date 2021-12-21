@@ -1,0 +1,17 @@
+
+
+def my_dater(year_week):
+    return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+
+df = df.copy()
+df_country['TestingDates'] = df_country['year_week'].apply(my_dater)
+
+def timeNamer(t)
+	return t='{0:%m%d%y%H%M%S}'.format(datetime.datetime.now())
+
+
+t.apply(timeNamer)
+
+
+plt.savefig('lmplotTestsVnew'+ t + '.png')
+plt.show()

@@ -1,0 +1,63 @@
+from datetime import datetime
+filename = 'lmplotTestsV'
+def time_namer(filename)
+	t='{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
+	return(filename + t)
+
+
+
+
+	return datetime.datetime.now().strftime(date, "%I%M%S%d%m%Y")
+
+works: def my_dater(year_week):
+    		return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+
+works: t='{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
+print(t)
+
+
+plt.savefig('lmplotTestsVnew'+ t + '.png')
+
+
+
+date = date.apply(time_namer)
+	t = '{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
+	return(t + t)
+
+# def timeNamer(filename)
+# 	return date ='{0:%m%d%y%H%M%S}'.format(datetime.datetime.now())
+
+date = datetime.datetime.now().strftime("%I%M%S%d%m%Y")
+print(f"filename_{date}")
+#
+# def time_namer(filename):
+#       shite one: return datetime.datetime.now().strftime(date, "%I%M%S%d%m%Y")
+#     return datetime.datetime.strptime(date + '-1', "%Y-W%W-%w")
+
+df = df.copy()
+df_country['TestingDates'] = df_country['year_week'].apply(my_dater)
+
+
+filename = 'lmplotTestsV'
+
+t='{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
+print(t)
+
+from datetime import datetime
+
+now = datetime.now() # current date and time
+
+year = now.strftime("%Y")
+print("year:", year)
+
+month = now.strftime("%m")
+print("month:", month)
+
+day = now.strftime("%d")
+print("day:", day)
+
+time = now.strftime("%H:%M:%S")
+print("time:", time)
+
+date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+print("date and time:",date_time)
