@@ -1,0 +1,13 @@
+df.groupby('Outlet_Location_Type').count()
+
+use this from 
+https://www.analyticsvidhya.com/blog/2020/03/groupby-pandas-aggregating-data-python/
+
+to look at the dataset from ecdc; 
+group by variant?
+country? 
+graph the object; barchart; 
+different type of graph; histogram
+over time; delta vs wild type. 
+
+look at the rest of the page
