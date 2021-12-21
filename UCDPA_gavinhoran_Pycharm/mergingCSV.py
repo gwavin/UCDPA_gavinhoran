@@ -1,3 +1,6 @@
+#So this one demonstrates merging;I also define a function in here,I think it was my_dater. I also read in a CSV.
+# and create a variety of styles.
+
 import matplotlib.pyplot as plt
 import datetime
 import seaborn as sns
@@ -7,6 +10,8 @@ import matplotlib.cbook as cbook
 
 # this data comes from ECDC testing data
 # https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv
+from UCDPA_gavinhoran_Pycharm.FromJan2021 import my_dater
+
 sns.set_style('darkgrid')  # darkgrid, white grid, dark, white and ticks
 plt.rc('axes', titlesize=12)  # fontsize of the axes title
 plt.rc('axes', labelsize=10)  # fontsize of the x and y labels
@@ -20,6 +25,7 @@ plt.rc('font', size=13)  # controls default text sizes
 import pandas as pd
 df = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv')
 df2 = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/virusvariant/csv/data.csv')
+df3 = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/hospitalicuadmissionrates/csv/data.csv')
 # This is a for loop!
 # print("df")
 # for col in df.columns:
@@ -30,24 +36,28 @@ df2 = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/virusvariant/csv/data
 #     print(col)
 
 df_new = pd.merge(df, df2, left_on=('country', 'country_code', 'year_week'),right_on=('country', 'country_code', 'year_week'), how="outer")
-print(df_new.head())
+df_newer = pd.merge(df3, df_new, left_on=('country', 'year_week'),right_on=('country', 'year_week'), how="outer")
+print('this is the first combo')
+print(df_newer.head())
+print('this is the three combined: ')
 df_new.to_csv(r'variantAndTestingDataMerged.csv')
+df_newer.to_csv(r'variantTestingDataAndHospOcc.csv')
 
-for col in df_new.columns:
+for col in df_newer.columns:
     print(col)
 
 # country = ['IE', 'DE', 'ES', 'FR', 'NL']  # looking at five comparable countries IE_DE_ES_FR_NL_Testing.py
 country = ['IE']  # looking at ireland only
 
 # taking a subset of these countries, graph was too crowded otherwise.
-df_country = df[df["country_code"].isin(country)]
+df_country = df_newer[df_newer["country_code"].isin(country)]
 
 
-def my_dater(year_week):
-    return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+# def my_dater(year_week):
+#     return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+#
 
-
-df = df.copy()
+df_newer = df_newer.copy()
 df_country['TestingDates'] = df_country['year_week'].apply(my_dater)
 
 # fig = plt.figure()

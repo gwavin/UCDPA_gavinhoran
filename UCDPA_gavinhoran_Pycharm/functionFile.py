@@ -1,10 +1,10 @@
-
 import matplotlib.pyplot as plt
 import datetime
 import seaborn as sns
 import matplotlib.dates as mdates
 import pandas as pd
 import matplotlib.cbook as cbook
+
 
 #
 # def Nice_Date(df, dateformat):
@@ -18,7 +18,8 @@ import matplotlib.cbook as cbook
 
 # function to returns date
 def niceDate(year_week):
-	return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+    return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+
 
 d = "2013-W05"
 a = niceDate(d)
@@ -32,3 +33,14 @@ print(r)
 #         row['Date'] = datetime.datetime.strptime(row['Date'], '%Y%m%d')
 #         csv.DictWriter(str(df)+'_converted.csv', data)
 #         return
+
+# from datetime import datetime
+
+
+
+
+def time_namer(filename):
+    t = '{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
+    return (filename + t)
+
+
