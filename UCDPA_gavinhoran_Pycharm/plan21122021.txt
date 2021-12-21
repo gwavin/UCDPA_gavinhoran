@@ -11,3 +11,10 @@ different type of graph; histogram
 over time; delta vs wild type. 
 
 look at the rest of the page
+
+clean the lmplot; don't do anything more to it, strip it back 
+then do a graph from each lesson in seaborn using that program as a sample
+create a new directory to do this. 
+
+https://www.ecdc.europa.eu/sites/default/files/documents/2021-01-13_Variable_Dictionary_and_Disclaimer_hosp_icu_all_data.pdf
+review this/ 
