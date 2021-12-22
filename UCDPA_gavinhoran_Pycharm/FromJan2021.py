@@ -7,6 +7,8 @@ import pandas as pd
 import matplotlib.cbook as cbook
 # this data comes from ECDC testing data
 # https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv
+from UCDPA_gavinhoran_Pycharm.functionFile import my_dater
+
 sns.set_style('darkgrid')  # darkgrid, white grid, dark, white and ticks
 plt.rc('axes', titlesize=12)  # fontsize of the axes title
 plt.rc('axes', labelsize=10)  # fontsize of the x and y labels
@@ -24,8 +26,7 @@ country = ['IE']  # looking at ireland only
 df_country = df[df["country_code"].isin(country)]
 
 
-def my_dater(year_week):
-    return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+
 
 df = df.copy()
 df_country['TestingDates'] = df_country['year_week'].apply(my_dater)

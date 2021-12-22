@@ -21,11 +21,13 @@ def niceDate(year_week):
     return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
 
 
+# Below was how I made the bit above. d is an example of what a date looked like in the ECDC data; then I run
+# niceDate on it. technically, it shouldn't have any uppercase in it, I know that now.
 d = "2013-W05"
 a = niceDate(d)
 r = datetime.datetime.strptime(d + '-1', "%Y-W%W-%w")
-print(a)
-print(r)
+
+
 #
 # def format_date(df, dateformat):
 #     """this will format the column containing dates'"""
@@ -34,13 +36,20 @@ print(r)
 #         csv.DictWriter(str(df)+'_converted.csv', data)
 #         return
 
-# from datetime import datetime
-
-
-
-
-def time_namer(filename):
+# I made this to take a given filename, which I've imaginatively called filename, and to append the time and date to it, in the format
+# HHMMSSDDMMYY and then to place that in front of ".png".... Okay, I'm going to do something crazy.
+#
+def png_time_namer(filename):
     t = '{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
-    return (filename + t)
+    a = '.png'
+    return (filename + t + a)
 
 
+def my_dater(year_week):
+    return datetime.datetime.strptime(year_week + '-1', "%Y-W%W-%w")
+
+
+def csv_time_namer(filename):
+    t = '{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
+    b = '.csv'
+    return (filename + t + b)
