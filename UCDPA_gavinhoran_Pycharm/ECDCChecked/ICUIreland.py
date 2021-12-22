@@ -55,7 +55,7 @@ sns.set(rc={'figure.figsize':(11.7,8.27)})
 sns.lineplot(data=df_sort_by_ICU, x='date', y='value').set_title("COVID ICU Occupancy at worst")
 next(df_sort_by_ICU.iterrows())
 for index, value in df_sort_by_ICU.head(n=2).iterrows():
-     print(index, row)
+     print(index, value)
 # #
 # #
 # # # counted_df = licenses_owners.groupby('title').agg({'account':'count'})
