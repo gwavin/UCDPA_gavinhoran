@@ -15,9 +15,8 @@ plt.rc('ytick', labelsize=10)  # fontsize of the tick labels
 plt.rc('legend', fontsize=10)  # legend fontsize
 plt.rc('font', size=13)  # controls default text sizes
 
-
-
 import pandas as pd
+
 df = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv')
 df2 = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/virusvariant/csv/data.csv')
 # This is a for loop!
@@ -29,11 +28,23 @@ df2 = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/virusvariant/csv/data
 # for col in df2.columns:
 #     print(col)
 
-df_new = pd.merge(df, df2, left_on=('country', 'country_code', 'year_week'),right_on=('country', 'country_code', 'year_week'), how="outer")
+df_new = pd.merge(df, df2, left_on=('country', 'country_code', 'year_week'),
+                  right_on=('country', 'country_code', 'year_week'), how="outer")
 print(df_new.head())
 df_new.to_csv(r'variantAndTestingDataMerged.csv')
 
 for col in df_new.columns:
+    print(col)
+
+# df_dropper = df_new.copy(deep=True)
+df_dropper = df_new.copy()
+print(df_dropper.head())
+for col in df_dropper.columns:
+    print(col)
+
+df_dropper.drop('percent_variant', axis=1)
+print(df_dropper.head())
+for col in df_dropper.columns:
     print(col)
 
 # country = ['IE', 'DE', 'ES', 'FR', 'NL']  # looking at five comparable countries IE_DE_ES_FR_NL_Testing.py

@@ -12,7 +12,7 @@ import pandas as pd
 from pandas import Series, DataFrame
 from pandas.io.parsers import TextFileReader
 
-from UCDPA_gavinhoran_Pycharm.FromJan2021 import my_dater
+from UCDPA_gavinhoran_Pycharm.functionFile import my_dater
 from UCDPA_gavinhoran_Pycharm.functionFile import png_time_namer
 
 # These are the various options available for the sns style list. 

@@ -37,9 +37,15 @@ df_sixmonths = df_sixmonths[(df_sixmonths['TestingDates'].dt.year == 2021)]#use 
 #fig = plt.figure()
 fig, axes = plt.subplots(figsize=(10, 6))
 
-t1 = sns.lineplot(x="TestingDates", y="testing_rate", data=df_sixmonths,label="Testing Rate",hue='country_code')  # first plot
+t1 = sns.lineplot(x="TestingDates", y="testing_rate", data=df_sixmonths,label="Testing Rate")  # first plot
 
-t2 = sns.lineplot(x="TestingDates", y="new_cases", data=df_sixmonths,label="Detection of New Cases",hue='country_code')  # second plot i want these to share axes;
+t2 = sns.lineplot(x="TestingDates", y="new_cases", data=df_sixmonths,label="Detection of New Cases")  # second plot i want these to share axes;
+
+# I included hue for when I was doing this over multiple countries.
+# t1 = sns.lineplot(x="TestingDates", y="testing_rate", data=df_sixmonths,label="Testing Rate",hue='country_code')  # first plot
+#
+# t2 = sns.lineplot(x="TestingDates", y="new_cases", data=df_sixmonths,label="Detection of New Cases",hue='country_code')  # second plot i want these to share axes;
+
 
 # the first subplot
 ax0 = plt.subplot(t1)
