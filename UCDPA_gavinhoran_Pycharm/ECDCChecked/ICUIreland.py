@@ -39,24 +39,24 @@ df_newer = pd.merge(df3, df_new, left_on=('country', 'year_week'), right_on=('co
 # plt.savefig(png_time_namer(filename))
 df_Ire = df_newer[(df_newer['country']=='Ireland')]
 df_Ire_ICU = df_Ire.query('indicator == "Daily ICU occupancy"')
-df_sort_by_ICU = df_Ire_ICU
-
-df_sort_by_ICU = df_sort_by_ICU.nlargest(20, 'value')
-df_sort_by_ICU.to_csv("twentyWorstDays.csv")
-
-
+# df_sort_by_ICU = df_sort_by_ICU.nlargest(20, 'value')
+# df_sort_by_ICU.to_csv("twentyWorstDays.csv")
+# df_sort_by_ICU = df_Ire_ICU
+#
+# df_Ire_ICU.to_csv(csv_time_namer('icuIreland'))
+# print(df_Ire_ICU)
 # df_Ire_ICU = df_Ire_ICU.copy()
 # df_Ire_ICU['date'] = pd.to_datetime(df_Ire_ICU['date'], format = '%Y-%m-%d')
 # # df_country = df[df["country_code"].isin(country)]
 # # print(df_Ire_ICU.head())
 # # df_newer.to_csv(csv_time_namer('testVarHospMerger'))
 #
+df_Ire_ICU = df_Ire_ICU.copy()
+df_Ire_ICU['date'] = df_Ire_ICU['year_week'].apply(my_dater)
+
 sns.set(rc={'figure.figsize':(11.7,8.27)})
-sns.lineplot(data=df_sort_by_ICU, x='date', y='value').set_title("COVID ICU Occupancy at worst")
-next(df_sort_by_ICU.iterrows())
-for index, value in df_sort_by_ICU.head(n=2).iterrows():
-     print(index, value)
-# #
+sns.lineplot(data=df_Ire_ICU, x='date', y='value').set_title("COVID ICU Occupancy at worst")
+
 # #
 # # # counted_df = licenses_owners.groupby('title').agg({'account':'count'})
 # # # filename = input('Please input the Filename and desired title for your plot: ')
