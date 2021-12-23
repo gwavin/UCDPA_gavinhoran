@@ -18,17 +18,21 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from UCDPA_gavinhoran_Pycharm.functionFile import my_dater
+
 df = pd.read_csv('ECDCCovidTestingData.csv')
 irishData = df[df['country_code']=='DE'] #Only looking at Irish data for now,removing other data I don't wiash to look
 # at
+irishData = irishData.copy()
+irishData['TestingDates'] = irishData['year_week'].apply(my_dater)
 
 # Create line plot
 
-sns.lineplot(x="year_week",y="testing_rate",data=irishData)
-# sns.relplot(x="year_week",y="positivity_rate", data=irishData, kind="line")
+# sns.lineplot(x="TestingDates",y="testing_rate",data=irishData)
+sns.relplot(x="TestingDates",y="positivity_rate", data=irishData, kind="line")
 
 
-plt.xticks(rotation= 90)
+plt.xticks(rotation= 30)
 plt.savefig('testingSaveRegressionOrder2.png')
 # plt.plot()
 # Show plot

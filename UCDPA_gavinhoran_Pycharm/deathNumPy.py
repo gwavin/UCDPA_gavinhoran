@@ -13,8 +13,18 @@ dfg = death.groupby(["countryterritoryCode"]).mean()
 
 dfgsorted = dfg.sort_values(by=['deaths'])
 # only interested in ireland
-# dfgsorted.to_excel("deathsGroupedSorted.xlsx")
-
+dfgsorted.to_excel("deathsGroupedSorted.xlsx")
+# ax = dfgsorted.hist(column='deaths', grid=False, figsize=(8,10), color='#86bf91')
+#
+# plt.xlabel('countryterritoryCode',fontsize=15)
+# plt.ylabel('deaths',fontsize=15)
+# plt.xticks(fontsize=15)
+# plt.yticks(fontsize=15)
+# plt.title('avgDailyDeaths',fontsize=15)
+#
+#
+#
+# plt.show()
 moreDeathThanIreland = dfgsorted.index[dfgsorted['deaths'] > 19.65 ].tolist()
 print(moreDeathThanIreland)
 death_ireland = death[death['countryterritoryCode'] == 'IRL']

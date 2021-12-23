@@ -5,8 +5,8 @@ import pandas as pd
 
 # this data comes from ECDC testing data
 # https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv
-from UCDPA_gavinhoran_Pycharm.FromJan2021 import my_dater
-from UCDPA_gavinhoran_Pycharm.functionFile import time_namer
+from UCDPA_gavinhoran_Pycharm.functionFile import my_dater
+from UCDPA_gavinhoran_Pycharm.functionFile import png_time_namer
 
 sns.set_style('darkgrid')  # darkgrid, white grid, dark, white and ticks
 plt.rc('axes', titlesize=12)  # fontsize of the axes title
@@ -19,7 +19,7 @@ plt.rc('font', size=13)  # controls default text sizes
 df = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv')
 
 # country = ['IE', 'DE', 'ES', 'FR', 'NL']  # looking at five comparable countries IE_DE_ES_FR_NL_Testing.py
-country = ['IE']  # looking at ireland only, because when I looked at the rest it was really messy and any connection
+country = ['NL']  # looking at ireland only, because when I looked at the rest it was really messy and any connection
 # between the data and the plot was lost. One country at a time was good. I suppose this would be a good time to
 # explain why I think that;s the case. In Ireland, the number of tests done at the start was linked quite well with
 # how many # new cases there might be. We were ramping up our capacity to test. As a result the number of people
@@ -44,26 +44,22 @@ sns.lmplot(data=df_country,
            y="new_cases",
            order=2)
 
-# np.corrcoef(np_city[:,0], np_city[:,1])
-# array([[ 1.     , -0.01802],       [-0.01803,  1.     ]])
-# np.std(np_city[:,0])0.1992
 
 # decided to make new cases dependent because you can't really get new case numbers without doing tests.
 plt.title("lmplot,Tests_done (independent )v. new cases(dependent), Order = 2")
 
-#file_name = 'mycsvfile' + str(datetime.now()) + '.csv'
+
 print(str(datetime.datetime.now()))
 t='{0:%H%M%S%d%m%y}'.format(datetime.datetime.now())
 print(t)
 
 filename = 'lmplotTestsV'
 
-# plt.savefig('lmplotTestsVnew'+ t + '.png')
 
-plt.savefig(time_namer(filename) + '.png')
+
+plt.savefig(png_time_namer(filename))
 plt.show()
-# def timeNamer(date)
-# 	return date ='{0:%m%d%y%H%M%S}'.format(datetime.datetime.now())
+
 
 date = datetime.datetime.now().strftime("%I%M%S%d%m%Y")
 print(f"filename_{date}")

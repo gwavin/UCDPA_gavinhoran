@@ -15,7 +15,7 @@ plt.rc('legend', fontsize=10)  # legend fontsize
 plt.rc('font', size=13)  # controls default text sizes
 
 df = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv')
-country = ['IE','NL']  # looking at five comparable countries IE_DE_ES_FR_NL_Testing.py
+country = ['IE','NL','PL']  # looking at five comparable countries IE_DE_ES_FR_NL_Testing.py
 
 #country = ['IE', 'DE', 'ES', 'FR', 'NL']  # looking at five comparable countries IE_DE_ES_FR_NL_Testing.py
 #taking a subset of these countries, graph was too crowded otherwise.
@@ -28,6 +28,6 @@ def my_dater(year_week):
 df = df.copy()
 df_country['TestingDates'] = df_country['year_week'].apply(my_dater)
 sns.lineplot(x="TestingDates", y="positivity_rate", data=df_country, hue='country_code')
-plt.title("Testing in 5 European Nations")
+plt.title("Positivity; Ireland v The Netherlands")
 plt.xticks(rotation=45)
 plt.show()

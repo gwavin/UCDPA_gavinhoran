@@ -18,7 +18,7 @@ df = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv')
 df2 = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/virusvariant/csv/data.csv')
 
 # country = ['IE', 'DE', 'ES', 'FR', 'NL']  # looking at five comparable countries IE_DE_ES_FR_NL_Testing.py
-country = ['IE']  # looking at ireland only
+country = ['DE']  # looking at ireland only
 
 #taking a subset of these countries, graph was too crowded otherwise.
 df_country = df[df["country_code"].isin(country)]
@@ -49,7 +49,7 @@ ax1.set_ylabel('Testing', color='b')
 
 # remove vertical gap between subplots
 plt.subplots_adjust(hspace=.0)
-plt.title("Testing and new cases in Ireland")
+plt.title("Testing and new cases in Germany")
 #plt.xticks(rotation=45)
 plt.savefig('teSTINGvDetectionIreland.png')
 plt.show()

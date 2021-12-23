@@ -33,13 +33,13 @@ sns.regplot(data=df_country,
          y='tests_done',
          x="new_cases",
          marker='^',
-         color='g',order=2)
+         color='g',order=1)
 
 # np.corrcoef(np_city[:,0], np_city[:,1])
 # array([[ 1.     , -0.01802],       [-0.01803,  1.     ]])
 # np.std(np_city[:,0])0.1992
 
 
-plt.title("regression, order =2")
+plt.title("regression, order = 1")
 plt.savefig('testingSaveRegressionOrder2.png')
 plt.show()

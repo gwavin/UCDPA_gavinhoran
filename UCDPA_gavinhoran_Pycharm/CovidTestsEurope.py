@@ -18,17 +18,25 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from UCDPA_gavinhoran_Pycharm.functionFile import my_dater
+plt.rc('legend', fontsize=10)  # legend fontsize
 df = pd.read_csv('ECDCCovidTestingData.csv')
+
+df = df.copy()
+df['TestingDates'] = df['year_week'].apply(my_dater)
+
+
 irishData = df[df['country_code']=='IE'] #Only looking at Irish data for now,removing other data I don't wiash to look
 GermanData = df[df['country_code']=='DE']
 SpanishData = df[df['country_code']=='ES']
 
-sns.lineplot(x="year_week",y="testing_rate",data=irishData)
-sns.lineplot(x="year_week",y="testing_rate",data=GermanData)
-sns.lineplot(x="year_week",y="testing_rate",data=SpanishData)
+
+sns.lineplot(x="TestingDates",y="testing_rate",data=irishData,color='g')
+sns.lineplot(x="TestingDates",y="testing_rate",data=GermanData,color='r')
+sns.lineplot(x="TestingDates",y="testing_rate",data=SpanishData,color='b')
 
 
-plt.xticks(rotation= 90)
+plt.xticks(rotation= 30)
 
 # plt.plot()
 # Show plot
