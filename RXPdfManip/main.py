@@ -3,9 +3,20 @@ import PyPDF2
 import re
 import shutil
 import datetime
+import os
+
+
+
+yourpath = 'rename\oldPdf'
+# for root, dirs, files in os.walk(yourpath, topdown=False):
+for root, dirs, files in os.walk(yourpath, topdown=False):
+    for name in files:
+        pdfName = os.path.join(root, name)
+        print("pdfName is " + pdfName)
+
 
 # creating a pdf file object
-pdfFileObj = open('rename\oldPdf\DBPrint Job (9).pdf', 'rb')
+pdfFileObj = open('rename\oldPdf\mncms.test@healthmail.ie@20220217170651 DBPrint Job (7).pdf', 'rb')
 # creating a pdf reader object
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 # creating a page object
@@ -18,11 +29,13 @@ text = pageObj.extractText()
 
 # searching for MRN
 mrn = re.search("MRN:\n(H[0-9]{7})", text)
-# [0-9]{7}
-# imtag = re.match(r'<img.*?>', line).group(0)
-# print(mrn)
+#mrn = re.search("MRN:\n(H[0-9]{7})", text)
+print(mrn)
+orderID = re.search("Order ID:\n\s\s([0-9]{9})", text)
+print(orderID)
 actualMRN = mrn.group(1)
-print(actualMRN)
+actualOrderID = orderID.group(1)
+print("MRN:" + actualMRN + " and Order ID:" + actualOrderID)
 # print(type(text))
 # closing the pdf file object
 def pdf_namer(filename):
@@ -43,3 +56,15 @@ print("new name is " + newName)
 #
 
 pdfFileObj.close()
+
+# yourpath = 'rename\oldPdf'
+# # for root, dirs, files in os.walk(yourpath, topdown=False):
+# for root, dirs, files in os.walk(yourpath, topdown=False):
+#     for name in files:
+#         pdfName = os.path.join(root, name)
+#         print("pdfName is " + pdfName)
+#
+#     for name in dirs:
+#         dirName = os.path.join(root, name)
+#         print("dirName is " + dirName)
+

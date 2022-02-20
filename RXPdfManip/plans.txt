@@ -8,3 +8,49 @@ rename it with the order number
 
 is there some way I can send the email address it was sent to to the folder also? That would have to happen at the macro stage, rename it with the name of the other email address? 
 the macro currnetly just gets the attachment; 
+
+
+Rotunda Hospital
+Parnell Square
+Dublin
+DO1 P5W9
+018171700
+ Patient Name
+GAVINA  CERT
+ Birthdate:
+02/05/1990
+Age:
+31 years
+Sex:
+Female
+Hospital Number/MRN:
+H04010251
+ Weight:
+Date of Weight:
+ Patient Address:
+14 TEST LANE, DUBLIN 1
+Consultant:
+Ward/Department:
+RH-TEB BOOKING
+BVTEB
+Known Allergies:
+Codeine.
+Prescription Details:
+Date Written/Issued:
+17/02/2022
+Rx: Aspirin tablet
+75 mg oral ONCE a day for 1 month
+Order ID:
+  229815057
+Page: 1 of 1     
+
+Date Printed:
+Prescribed by:
+Horan, Gavin   PHARM Registered Medical Practitioner
+17/02/2022 21:16
+Black Ice Software LLC
+Demo version
+
+<class 'str'>
+
+Process finished with exit code 0
