@@ -1,0 +1,10 @@
+get one download pdf  name db printjob.pdf
+read it into python 
+
+print anything out
+print out the order number
+rename it with the order number
+
+
+is there some way I can send the email address it was sent to to the folder also? That would have to happen at the macro stage, rename it with the name of the other email address? 
+the macro currnetly just gets the attachment; 

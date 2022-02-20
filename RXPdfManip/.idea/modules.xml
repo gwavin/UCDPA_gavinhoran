@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RXPdfManip.iml" filepath="$PROJECT_DIR$/.idea/RXPdfManip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../UCDPA_gavinhoran_Pycharm/.idea/UCDPA_gavinhoran_Pycharm.iml" filepath="$PROJECT_DIR$/../UCDPA_gavinhoran_Pycharm/.idea/UCDPA_gavinhoran_Pycharm.iml" />
     </modules>
   </component>
 </project>
