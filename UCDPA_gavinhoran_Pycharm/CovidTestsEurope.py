@@ -18,14 +18,18 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('ECDCCovidTestingData.csv')
+# df = pd.read_csv('ECDCCovidTestingData.csv')
+# https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv
+df = pd.read_csv('https://opendata.ecdc.europa.eu/covid19/testing/csv/data.csv')
 irishData = df[df['country_code']=='IE'] #Only looking at Irish data for now,removing other data I don't wiash to look
 GermanData = df[df['country_code']=='DE']
 SpanishData = df[df['country_code']=='ES']
-
+NLData = df[df['country_code']=='NL']
 sns.lineplot(x="year_week",y="testing_rate",data=irishData)
-sns.lineplot(x="year_week",y="testing_rate",data=GermanData)
-sns.lineplot(x="year_week",y="testing_rate",data=SpanishData)
+# sns.lineplot(x="year_week",y="testing_rate",data=GermanData)
+# sns.lineplot(x="year_week",y="testing_rate",data=SpanishData)
+sns.lineplot(x="year_week",y="testing_rate",data=NLData)
+
 
 
 plt.xticks(rotation= 90)
